@@ -1,0 +1,4 @@
+{
+    "baseUrl" : "https://docs.cypress.io",
+    "ignoreTestFiles" : "**/examples/*"
+}
