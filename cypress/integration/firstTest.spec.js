@@ -50,7 +50,7 @@
 //       cy.visit('https://next.privat24.ua/deposit/open')
 //       cy.get('tdbody').find('td').find('div').find('button').eq('0')   // .find по тегам скачет,eq- по массиву индекс от 0 до ..
 // });
-//Git commit
+//Git committ
 
 it.only('Using get with Find and Eq', () => {
       cy.viewport(1800, 700)
