@@ -1,1 +1,25 @@
 ///  <reference types="Cypress" /> 
+
+
+it.only('Replenishment', () => {
+      cy.viewport(1800, 700)
+      cy.visit('https://test.buildgcp.com/login')
+      .get('[name="login"]')
+      .type('test-user')
+      .get('[name="password"]')
+      .type('aA123123!')
+      .get('.MuiButtonBase-root')
+      .click()
+      .wait(5000)
+      // .get('a[href="/projects"]')
+      // .click()
+      // .get('.MuiButton-label')
+      // .click()
+      // .get('input[name="name"]')
+      // .type('AutotestCypress')
+      // .should('have.value', 'AutotestCypress')
+      // .end('be.visible')
+      .visit('https://test.buildgcp.com/database/categories?m=add')
+      .get('label[class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"]')
+      .should('contain.text', 'Category Name *')
+})
