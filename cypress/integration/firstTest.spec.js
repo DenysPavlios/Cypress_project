@@ -5,7 +5,7 @@ import { transferstion } from "../support/pages/transfers"
 import { basePages } from "../support/pages/basePages"
 
 it.only('Replenishment', () => {
-      basePages.url('https://next.privat24.ua/mobile?lang=en')
+      basePages.open('https://next.privat24.ua/mobile?lang=en')
       mobileReplenishment.typePhoneNumper('686979712')
       basePages.typeAmount('1')
       basePages.typeDebitCardData('4552331448138217', '0524', '111')
@@ -23,7 +23,7 @@ it.only('Replenishment', () => {
 
       it('Money transfer between foreign card', () => {
       cy.viewport(1800, 700)
-      basePages('https://next.privat24.ua/money-transfer/card?lang=en')     
+      basePages.open('https://next.privat24.ua/money-transfer/card?lang=en')     
       basePages.typeDebitCardData('4552331448138217', '0524', '111')
       transferstion.typeDebitNameAndSurname('Shayne', 'McConnelly')
       transferstion.typeDebitReceiverCard('5309233034765085')
