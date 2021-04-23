@@ -28,3 +28,6 @@ it("check error state of payment in the archive | public session", () => {
 
   cy.wait(2000).get('tbody').toMatchImageSnapshot();
 });
+
+
+

@@ -1,7 +1,6 @@
 {
   "name": "cypresstestproject",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +8,16 @@
   "author": "DenisPavlychenko",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^7.0.0",
+    "cypress": "^7.1.0",
     "cypress-xpath": "^1.6.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisPavlichenko/Cypress_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DenisPavlichenko/Cypress_project/issues"
+  },
+  "homepage": "https://github.com/DenisPavlichenko/Cypress_project#readme",
+  "description": ""
 }
