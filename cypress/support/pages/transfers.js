@@ -1,66 +1,61 @@
 export class Transfers {
-    
+
     typeDebitNameAndSurname(name, surname){
-    cy.get('input[data-qa-node="firstNamedebitSource"]')
+        cy.get('[data-qa-node="firstNamedebitSource"]')
             .type(name)
-            .get('input[data-qa-node="lastNamedebitSource"]')
+            .get('[data-qa-node="lastNamedebitSource"]')
             .type(surname)
     }
- 
 
-    typeDebitReceiverCard(NumberCard) {
-    cy.get('input[data-qa-node="numberreceiver"]')
-            .type(NumberCard)
+    typeReceiverCard(receiverCard){
+        cy.get('[data-qa-node="numberreceiver"]')
+            .type(receiverCard)
     }
 
-    typeReceiverNameAndSurname(name, surName) {
-    cy.get('input[data-qa-node="firstNamereceiver"]')
+    typeReceiverNameAndSurname(name, surname){
+        cy.get('[data-qa-node="firstNamereceiver"]')
             .type(name)
-            .get('input[data-qa-node="lastNamereceiver"]')
-            .type(surName)
-    
+            .get('[data-qa-node="lastNamereceiver"]')
+            .type(surname)
     }
 
-    typeClickComment(typecoment) {
-    cy.get('span[data-qa-node="toggle-comment"]')
+     typeComment(comment){
+        cy.get('[data-qa-node="toggle-comment"]')
             .click()
-            .get('textarea[data-qa-node="comment"]')
-            .type(typecoment)
-    }
+            .get('[data-qa-node="comment"]')
+            .type(comment)
+     }
 
-    checkDebitAndReceiverCards (debitcard, receivercard) {
-    cy.get('span[data-qa-node="payer-card"]')
-            .should('have.text', debitcard)
-            .get('span[data-qa-node="receiver-card"]')
-            .should('have.text', receivercard)
-    }
+     checkDebitAndReceiverCards(debitCard, receiverCard){
+        cy.get('[data-qa-node="payer-card"]')
+            .should("have.text", debitCard)
+            .get('[data-qa-node="receiver-card"]')
+            .should("have.text", receiverCard)
+     }
 
-    checkDebitAmountAndTotalCards(debitAmount, receiverCard) {
-    cy.get('div[data-qa-node="receiver-amount"]')
-            .should('have.text', debitAmount)
+     checkDebitAmountAndTotalAmount(debitAmount, totalAmount){
+        cy.get('[data-qa-node="payer-amount"]')
+            .should("have.text", debitAmount)
             .get('[data-qa-node="total"]')
-            .find('span')
-            .should('contain.text', receiverCard)
-    }   
+            .find("span")
+            .should("contain.text", totalAmount)
+     }
 
-    checkDebitComission(comission) {
-    cy.get('div[data-qa-node="payer-currency"]')
+     checkDebitComission(comission){
+        cy.get('[data-qa-node="payer-currency"]')
             .should("have.text", comission)
-    }
+     }
 
-    checkTotalCurrency(currency){
-    cy.get('[data-qa-node="total"]')
-            .find('small')
-            .should('contain.text', currency)
-    }
+     checktotalCurrency(currency){
+        cy.get('[data-qa-node="total"]')
+            .find("small")
+            .should("contain.text", currency)
+     }
 
-    checkComment(comment) {
-    cy.get('[data-qa-node="comment"]').eq(0)
-            .should("contain.text", comment)
-    }
-
-
-
+     checkComment(comment){
+        cy.get('[data-qa-node="comment"]')
+            .should("have.text", comment);
+     }
 }
 
-export const transferstion = new Transfers()
+export const transfers = new Transfers()
