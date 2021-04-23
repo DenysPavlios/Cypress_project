@@ -1,15 +1,17 @@
 {
-  "name": "cypresstestproject",
+  "name": "cypress tests",
   "version": "1.0.0",
-  "description": "",
+  "description": "cypress tests",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "DenisPavlychenko",
+  "author": "sergei semenov",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^7.0.0",
-    "cypress-xpath": "^1.6.2"
+    "cypress": "^6.2.0"
+  },
+  "dependencies": {
+    "cypress-plugin-snapshots": "^1.4.4"
   }
 }
