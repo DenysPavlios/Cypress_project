@@ -9,9 +9,9 @@ on:
 
 jobs:
   cypress-test:
-    name: Run on Chrome 83
+    name: Run on Chrome 90
     runs-on: ubuntu-18.04
-    container: cypress/browsers:node12.18.0-chrome83-ff77
+    container: cypress/browsers:node14.16.0-chrome90-ff88
     steps:  
       - uses: actions/checkout@v2
       
